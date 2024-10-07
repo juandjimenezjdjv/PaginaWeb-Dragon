@@ -73,18 +73,18 @@ async function cambiarContrasena() {
 // Función para manejar el clic en el ícono de inicio de sesión
 function handleLoginClick(event) {
   event.preventDefault();
-  
+  alert("HOLA");
   const role = getRoleFromToken();
-  console.log("Role obtenido:", role); // Para ver el rol en la consola
-
+  
+  alert(role);
   if (role === null) {
-      window.location.href = 'inicioSesion.html';
+      window.location.href = 'iniciosesion.html';
   } else if (role === "cliente") {
       window.location.href = 'perfilUsuario.html';
   } else if (role === "admin") {
       window.location.href = 'perfilAdmin.html';
   } else {
-      window.location.href = 'inicioSesion.html';
+      window.location.href = 'iniciosesion.html';
   }
 }
 // Función para cerrar la sesión
@@ -105,7 +105,7 @@ document.addEventListener('DOMContentLoaded', () => {
       .then(data => {
         document.getElementById('header-placeholder').innerHTML = data;
         // Aquí se agrega el evento para manejar el clic en el icono de inicio de sesión
-        const loginIcon = document.querySelector('a[href="inicioSesion.html"]');
+        const loginIcon = document.querySelector('a[href="iniciosesion.html"]');
         loginIcon.addEventListener('click', handleLoginClick);
         const logoutIcon = document.getElementById('logout-icon');
         if (logoutIcon) {
