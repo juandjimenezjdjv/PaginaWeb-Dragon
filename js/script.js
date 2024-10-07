@@ -72,7 +72,8 @@ async function cambiarContrasena() {
 
 // Función para manejar el clic en el ícono de inicio de sesión
 function handleLoginClick(event) {
-  console.log(event)
+  Alert(event);
+  Alert("Hola");
   event.preventDefault();
   
   const role = getRoleFromToken();
@@ -107,9 +108,9 @@ document.addEventListener('DOMContentLoaded', () => {
         document.getElementById('header-placeholder').innerHTML = data;
         // Aquí se agrega el evento para manejar el clic en el icono de inicio de sesión
         const loginIcon = document.querySelector('a[href="inicioSesion.html"]');
-        console.log("1");
+        Alert("1");
         loginIcon.addEventListener('click', handleLoginClick);
-        console.log("2");
+        Alert("2");
         const logoutIcon = document.getElementById('logout-icon');
         if (logoutIcon) {
             logoutIcon.addEventListener('click', handleLogOut);
