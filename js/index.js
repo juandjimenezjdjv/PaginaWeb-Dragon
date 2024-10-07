@@ -65,7 +65,7 @@ document.addEventListener('DOMContentLoaded', () => {
                     
                         <div class="card-body">
                             <h3 class="card-title">${tour.nombre}</h3>
-                            <p>hola</p>
+                            <p>hola a todos</p>
                             <p class="card-text">Fecha salida: ${new Date(tour.horafechasalida).toLocaleString('es-ES', options)}</p>
                             <p class="card-text">Fecha llegada: ${new Date(tour.horafechallegada).toLocaleString('es-ES', options)}</p>
                             <p class="card-text"><strong>Precio en colones: ${tour.precio}</strong></p>
