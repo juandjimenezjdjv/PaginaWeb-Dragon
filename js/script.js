@@ -101,17 +101,20 @@ function handleLogOut(event) {
 document.addEventListener('DOMContentLoaded', () => {
     // Código para cargar header y footer
     fetch('header.html')
-      .then(response => response.text())
-      .then(data => {
-        document.getElementById('header-placeholder').innerHTML = data;
-        // Aquí se agrega el evento para manejar el clic en el icono de inicio de sesión
-        const loginIcon = document.querySelector('a[href="inicioSesion.html"]');
+  .then(response => response.text())
+  .then(data => {
+    document.getElementById('header-placeholder').innerHTML = data;
+    // Aquí se agrega el evento para manejar el clic en el icono de inicio de sesión
+    const loginIcon = document.querySelector('a[href="inicioSesion.html"]');
+    if (loginIcon) {  // Verifica si el ícono existe
         loginIcon.addEventListener('click', handleLoginClick);
-        const logoutIcon = document.getElementById('logout-icon');
-        if (logoutIcon) {
-            logoutIcon.addEventListener('click', handleLogOut);
-        }
-      });
+    }
+    const logoutIcon = document.getElementById('logout-icon');
+    if (logoutIcon) {
+        logoutIcon.addEventListener('click', handleLogOut);
+    }
+  });
+
   
     fetch('footer.html')
       .then(response => response.text())
