@@ -1,6 +1,6 @@
 async function cargarServicios() {
     try {
-        const response = await fetch('http://localhost:5005/getServices'); // Llama a tu ruta API
+        const response = await fetch('https://api-dragon.onrender.com/getServices'); // Llama a tu ruta API
         const servicios = await response.json(); // Obtén los datos en formato JSON
 
         const tbody = document.getElementById('serviciosTableBody');
@@ -51,7 +51,7 @@ function editarServicio(codigoServicio) {
 async function eliminarServicio(codigoServicio) {
     if (confirm('¿Estás seguro de que deseas eliminar este servicio?')) {
         try {
-            const response = await fetch(`http://localhost:5005/deleteServicio/${codigoServicio}`, {
+            const response = await fetch(`https://api-dragon.onrender.com/deleteServicio/${codigoServicio}`, {
                 method: 'DELETE'
             });
             const result = await response.json();

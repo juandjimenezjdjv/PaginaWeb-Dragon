@@ -41,7 +41,7 @@ document.addEventListener('DOMContentLoaded', function() {
   // Función para obtener los detalles del servicio principal
   async function fetchServiceDetails(codigoServicio) {
     try {
-      const response = await fetch(`http://localhost:5005/getService/${codigoServicio}`, {
+      const response = await fetch(`https://api-dragon.onrender.com/getService/${codigoServicio}`, {
         method: 'GET',
         headers: { 'Content-Type': 'application/json' }
       });
@@ -64,7 +64,7 @@ document.addEventListener('DOMContentLoaded', function() {
   // Función para obtener las alianzas
   async function fetchAlianzas() {
     try {
-      const response = await fetch('http://localhost:5005/getServicesByType/5', {
+      const response = await fetch('https://api-dragon.onrender.com/getServicesByType/5', {
         method: 'GET',
         headers: { 'Content-Type': 'application/json' }
       });

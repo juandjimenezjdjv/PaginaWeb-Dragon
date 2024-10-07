@@ -37,7 +37,7 @@ document.addEventListener('DOMContentLoaded', async () => {
     
         // Si no hay imagen nueva y estamos actualizando, obtenemos el enlace de la imagen actual
         if (!imageUrl && codigoServicio) {
-            const existingService = await fetch(`http://localhost:5005/getService/${codigoServicio}`);
+            const existingService = await fetch(`https://api-dragon.onrender.com/getService/${codigoServicio}`);
             const servicio = await existingService.json();
     
             // Preservar el enlace de la imagen actual si no se ha seleccionado una nueva imagen
@@ -61,7 +61,7 @@ document.addEventListener('DOMContentLoaded', async () => {
 // Función para cargar los datos de la actividad existente
 async function cargarDatosServicio(codigoServicio) {
     try {
-        const response = await fetch(`http://localhost:5005/getService/${codigoServicio}`);
+        const response = await fetch(`https://api-dragon.onrender.com/getService/${codigoServicio}`);
         const servicio = await response.json();
         
         // Llenar el formulario con los datos del servicio para editar
@@ -85,7 +85,7 @@ async function cargarDatosServicio(codigoServicio) {
 // Función para crear un nuevo servicio
 async function crearServicio(data) {
     try {
-        const response = await fetch('http://localhost:5005/createService', {
+        const response = await fetch('https://api-dragon.onrender.com/createService', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
@@ -109,7 +109,7 @@ async function crearServicio(data) {
 // Función para actualizar un servicio existente
 async function actualizarServicio(codigoServicio, data) {
     try {
-        const response = await fetch(`http://localhost:5005/updateService/${codigoServicio}`, {
+        const response = await fetch(`https://api-dragon.onrender.com/updateService/${codigoServicio}`, {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',

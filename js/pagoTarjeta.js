@@ -25,7 +25,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
     async function fetchServiceDetails(codigoServicio) {
         try {
-            const response = await fetch(`http://localhost:5005/getService/${codigoServicio}`, {
+            const response = await fetch(`https://api-dragon.onrender.com/getService/${codigoServicio}`, {
                 method: 'GET',
                 headers: { 'Content-Type': 'application/json' }
             });
@@ -103,7 +103,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
         try {
             // Realizar la solicitud al backend para registrar el pago
-            const response = await fetch('http://localhost:5005/registrarPago', {
+            const response = await fetch('https://api-dragon.onrender.com/registrarPago', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json'

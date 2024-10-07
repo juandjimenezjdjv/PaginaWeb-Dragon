@@ -24,7 +24,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
         try {
             // Realizar la petición POST a la API
-            const response = await fetch('http://localhost:5005/createTestimonie', {
+            const response = await fetch('https://api-dragon.onrender.com/createTestimonie', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json'

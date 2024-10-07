@@ -12,7 +12,7 @@ document.addEventListener('DOMContentLoaded', () => {
     // Función para buscar tours por nombre
     async function searchTours(query) {
         try {
-            const response = await fetch(`http://localhost:5005/searchTours?query=${encodeURIComponent(query)}`, {
+            const response = await fetch(`https://api-dragon.onrender.com/searchTours?query=${encodeURIComponent(query)}`, {
                 method: 'GET',
                 headers: {
                     'Content-Type': 'application/json'
@@ -31,7 +31,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     async function fetchServicios() {
         try {
-            const response = await fetch('http://localhost:5005/getServices', {
+            const response = await fetch('https://api-dragon.onrender.com/getServices', {
                 method: 'GET',
                 headers: {
                     'Content-Type': 'application/json'
@@ -49,7 +49,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     async function filtrarServicios(tipo) {
         try {
-            const response = await fetch(`http://localhost:5005/getServicesByType/${tipo}`, {
+            const response = await fetch(`https://api-dragon.onrender.com/getServicesByType/${tipo}`, {
                 method: 'GET',
                 headers: {
                     'Content-Type': 'application/json'

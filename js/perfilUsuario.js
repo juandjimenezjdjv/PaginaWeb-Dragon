@@ -8,7 +8,7 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 
     // Realizar una solicitud para obtener los pagos del cliente
-    fetch(`http://localhost:5005/getPagosPorCliente/${correo}`, {
+    fetch(`https://api-dragon.onrender.com/getPagosPorCliente/${correo}`, {
         method: 'GET',
         headers: {
             'Content-Type': 'application/json'
@@ -25,7 +25,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // Evento para generar el informe en PDF
     document.getElementById('generar-informe-btn').addEventListener('click', function() {
-        window.location.href = `http://localhost:5005/generarInformePagos/${correo}`;
+        window.location.href = `https://api-dragon.onrender.com/generarInformePagos/${correo}`;
     });
 });
 

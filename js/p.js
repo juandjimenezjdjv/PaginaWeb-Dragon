@@ -77,7 +77,7 @@ function getRoleFromToken() {
           const data = { nombre, correo, contraseña };
     
           try {
-            const response = await fetch('http://localhost:5005/registerUser', {
+            const response = await fetch('https://api-dragon.onrender.com/registerUser', {
               method: 'POST',
               headers: {
                 'Content-Type': 'application/json'
@@ -116,7 +116,7 @@ function getRoleFromToken() {
           const data = { correo, contrasena: contraseña };
     
           try {
-            const response = await fetch('http://localhost:5005/login', {
+            const response = await fetch('https://api-dragon.onrender.com/login', {
               method: 'POST',
               headers: {
                 'Content-Type': 'application/json'
@@ -140,7 +140,7 @@ function getRoleFromToken() {
        // Función para obtener los tours aleatorios
        async function fetchRandomTours() {
         try {
-          const response = await fetch('http://localhost:5005/get3RandomServices', {
+          const response = await fetch('https://api-dragon.onrender.com/get3RandomServices', {
             method: 'GET',
             headers: {
               'Content-Type': 'application/json'
@@ -161,7 +161,7 @@ function getRoleFromToken() {
       }
       async function fetchServicios() {
         try {
-          const response = await fetch('http://localhost:5005/getServices', {
+          const response = await fetch('https://api-dragon.onrender.com/getServices', {
             method: 'GET',
             headers: {
               'Content-Type': 'application/json'
@@ -182,7 +182,7 @@ function getRoleFromToken() {
       }
       async function fetchAlianzas() {
         try {
-          const response = await fetch('http://localhost:5005/get3RandomServices', {
+          const response = await fetch('https://api-dragon.onrender.com/get3RandomServices', {
             method: 'GET',
             headers: {
               'Content-Type': 'application/json'
@@ -204,7 +204,7 @@ function getRoleFromToken() {
       // Función para obtener los testimonios aleatorios
       async function fetchRandomTestimonies() {
         try {
-          const response = await fetch('http://localhost:5005/get3RandomTestimonies', {
+          const response = await fetch('https://api-dragon.onrender.com/get3RandomTestimonies', {
             method: 'GET',
             headers: {
               'Content-Type': 'application/json'

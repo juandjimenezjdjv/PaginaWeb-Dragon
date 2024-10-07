@@ -14,7 +14,7 @@ function getRoleFromToken() {
 async function solicitarCodigo() {
   const correo = document.getElementById('correorecuperacion').value;
   try {
-    const response = await fetch('http://localhost:5005/recuperarContrasena', {
+    const response = await fetch('https://api-dragon.onrender.com/recuperarContrasena', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({ correo })
@@ -38,7 +38,7 @@ async function cambiarContrasena() {
   }
 
   try {
-    const response = await fetch('http://localhost:5005/cambiarContrasena', {
+    const response = await fetch('https://api-dragon.onrender.com/cambiarContrasena', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json'
@@ -141,7 +141,7 @@ document.addEventListener('DOMContentLoaded', () => {
         const data = { nombre, correo, contraseña };
   
         try {
-          const response = await fetch('http://localhost:5005/registerUser', {
+          const response = await fetch('https://api-dragon.onrender.com/registerUser', {
             method: 'POST',
             headers: {
               'Content-Type': 'application/json'
@@ -180,7 +180,7 @@ document.addEventListener('DOMContentLoaded', () => {
         const data = { correo, contrasena: contraseña };
   
         try {
-          const response = await fetch('http://localhost:5005/login', {
+          const response = await fetch('https://api-dragon.onrender.com/login', {
             method: 'POST',
             headers: {
               'Content-Type': 'application/json'

@@ -19,7 +19,7 @@ document.addEventListener('DOMContentLoaded', () => {
     // Función para obtener los tours aleatorios
     async function fetchRandomTours() {
         try {
-            const response = await fetch('http://localhost:5005/get3RandomServices', {
+            const response = await fetch('https://api-dragon.onrender.com/get3RandomServices', {
                 method: 'GET',
                 headers: {
                     'Content-Type': 'application/json'
@@ -37,7 +37,7 @@ document.addEventListener('DOMContentLoaded', () => {
     // Función para obtener los testimonios aleatorios
     async function fetchRandomTestimonies() {
         try {
-            const response = await fetch('http://localhost:5005/get3RandomTestimonies', {
+            const response = await fetch('https://api-dragon.onrender.com/get3RandomTestimonies', {
                 method: 'GET',
                 headers: {
                 'Content-Type': 'application/json'

@@ -2,7 +2,7 @@ document.addEventListener('DOMContentLoaded', () => {
     fetchTestimonies();
     async function fetchTestimonies() {
         try {
-            const response = await fetch('http://localhost:5005/getTestimonies', {
+            const response = await fetch('https://api-dragon.onrender.com/getTestimonies', {
                 method: 'GET',
                 headers: {
                     'Content-Type': 'application/json'
