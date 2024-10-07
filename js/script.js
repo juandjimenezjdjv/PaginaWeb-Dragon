@@ -101,43 +101,18 @@ function handleLogOut(event) {
 document.addEventListener('DOMContentLoaded', () => {
     // Código para cargar header y footer
     fetch('header.html')
-      .then(response => {
-        if (!response.ok) {
-          throw new Error('Error al cargar el archivo header.html');
-        }
-        return response.text();
-      })
+      .then(response => response.text())
       .then(data => {
         document.getElementById('header-placeholder').innerHTML = data;
-
-        // Espera un pequeño retardo para asegurarte que el header se ha cargado completamente
-        setTimeout(() => {
-          // Seleccionar el ícono de inicio de sesión
-          const loginIcon = document.querySelector('a[href="inicioSesion.html"]');
-          const logoutIcon = document.getElementById('logout-icon');
-
-          // Verificar si loginIcon existe antes de agregar event listener
-          if (loginIcon) {
-            loginIcon.addEventListener('click', handleLoginClick);
-          } else {
-            console.error('No se encontró el icono de inicio de sesión');
-          }
-
-          // Verificar si logoutIcon existe antes de agregar event listener
-          if (logoutIcon) {
+        // Aquí se agrega el evento para manejar el clic en el icono de inicio de sesión
+        const loginIcon = document.querySelector('a[href="inicioSesion.html"]');
+        loginIcon.addEventListener('click', handleLoginClick);
+        const logoutIcon = document.getElementById('logout-icon');
+        if (logoutIcon) {
             logoutIcon.addEventListener('click', handleLogOut);
-          } else {
-            console.error('No se encontró el icono de cierre de sesión');
-          }
-        }, 100); // Retardo breve para asegurarse de que el DOM esté listo
-      })
-      .catch(error => {
-        console.error('Error al cargar el header:', error);
+        }
       });
-});
-
-
-
+  
     fetch('footer.html')
       .then(response => response.text())
       .then(data => {
