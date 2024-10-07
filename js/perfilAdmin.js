@@ -1,6 +1,6 @@
 async function cargarServicios() {
     try {
-        const response = await fetch('https://api-dragon.onrender.com/getServices'); // Llama a tu ruta API
+        const response = await fetch('https://api-dragon.onrender.com/getServicesAdmin'); // Llama a tu ruta API
         const servicios = await response.json(); // Obtén los datos en formato JSON
 
         const tbody = document.getElementById('serviciosTableBody');
