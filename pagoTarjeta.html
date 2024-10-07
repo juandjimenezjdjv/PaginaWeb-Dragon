@@ -1,0 +1,66 @@
+<!-- Pago Tarjeta.html -->
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Cerro Dragón Tours</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/letras.css">
+</head>
+<body>
+  <header>
+    <div id="header-placeholder" class="bg-success" aria-label="Encabezado del sitio"></div>
+  </header>
+
+    <main>
+      <div class="container">
+        <div class="position-relative" style="margin-bottom: 20px; margin-top: 20px;">
+            <h1 class="banner text-start" style="color: black;">Pago con tarjeta</h1>
+            <p></p>
+        </div>
+
+        <form style="margin-bottom: 20px;" aria-labelledby="formulario de pago con tarjeta">
+          <fieldset class="bordediv">
+            <legend id="tour-nombre">Nombre del Tour</legend> <!-- Aquí se actualizará el nombre del tour dinámicamente -->
+            <p id="tour-descripcion">Descripción del tour y detalles.</p> <!-- Aquí se actualizará la descripción -->
+            <p id="precio-total"><strong>Precio total: </strong>₡0</p> <!-- Aquí se actualizará el precio total -->
+            <p>Escriba los datos de la tarjeta para proceder al pago:</p>
+            <!-- Formulario de pago -->
+            <div>
+              <label for="numTarjeta" class="form-label">Número de tarjeta:</label>
+              <input type="text" class="form-control" id="numTarjeta" placeholder="xxxx xxxx xxxx xxxx" aria-required="true" required>
+            </div>
+            <div>
+              <label for="codigoSeguridad" class="form-label">Código de seguridad:</label>
+              <input type="password" class="form-control" id="codigoSeguridad" placeholder="xxx" aria-required="true" required>
+            </div>
+            <div>
+              <label for="correoTarjetaCompra" class="form-label">Correo de contacto:</label>
+              <input type="email" class="form-control" id="correoTarjetaCompra" placeholder="Digite su correo de contacto" aria-required="true" required>
+            </div>
+            <div>
+              <label for="msjTarje" class="form-label">Mensaje:</label>
+              <textarea id="msjTarje" class="form-control" rows="4" placeholder="Escriba un mensaje o aclaración antes de su actividad"></textarea>
+            </div>
+            <a href="#" class="btn btn-success d-inline-flex align-items-center mb-5 text-center text-white" aria-label="Botón para proceder al pago mediante tarjeta">
+              Pagar
+            </a>
+          </fieldset>
+          
+        </form>
+
+      </div>
+    </main>
+
+    <footer>
+      <div id="footer-placeholder" class="bg-success" aria-label="Pie de página"></div>
+    </footer>
+
+</body>
+<script src="https://cdn.jsdelivr.net/npm/jwt-decode/build/jwt-decode.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+<script src="js/script.js"></script>
+<script src="js/pagoTarjeta.js"></script> 
+</html>

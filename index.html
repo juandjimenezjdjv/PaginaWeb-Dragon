@@ -1,0 +1,117 @@
+<!-- index.html -->
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0"> -->
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Cerro Dragón Tours</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/letras.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    
+    <header>
+        <div id="header-placeholder" class="bg-success" aria-label="Encabezado del sitio"></div>
+    </header>
+
+    <main>
+      <div id="background-section" class="py-5">
+          <div class="px-4 py-5 my-0 text-center">
+              <h1 class="display-5 fw-bold text-white">Explora la Naturaleza en Libertad</h1>
+              <div class="col-lg-6 mx-auto">
+                <p class="lead mb-4 text-white">En Cerro Dragon Tours te invitamos a descubrir la naturaleza en su estado más puro. Recorrerás senderos rodeados de cerros, respirarás aire fresco y te desconectarás del mundo cotidiano. ¡Es hora de explorar sin límites y dejarte llevar por la belleza natural que te rodea!</p>
+                <div class="d-grid gap-2 d-sm-flex justify-content-sm-center" role="group" aria-labelledby="Búsqueda de tours">
+                  <label id="Búsqueda de tours" for="buscar" class="visually-hidden">Buscar tours</label>
+                  <input class="round" type="text" id="buscar" placeholder="Búsqueda de tours" aria-label="Buscar tours">
+                  <button type="submit" class="btn btn-success btn-lg px-4 gap-3" aria-label="Iniciar búsqueda">
+                      <img src="./img/buscar.png" alt="Icono de buscar">
+                  </button>
+                </div>
+              </div>
+          </div>
+      </div>
+
+      <div class="container py-5 my-5" aria-labelledby="Carrusel de imágenes representativas de Cerro Dragón Tours">
+        <div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel" data-bs-interval="15000">
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <img src="./img_static/10.jpeg" class="d-block w-100" alt="Vista panorámica de un amanecer sobre las montañas, con un cielo lleno de nubes iluminado por tonos anaranjados y azules. La silueta de una montaña oscura destaca en primer plano.">
+            </div>
+            <div class="carousel-item">
+              <img src="./img_static/2.jpg" class="d-block w-100" alt="Ramillete de pequeñas flores de color rojo brillante que cuelgan delicadamente en medio de un entorno boscoso.">
+            </div>
+            <div class="carousel-item">
+              <img src="./img_static/3.jpeg" class="d-block w-100" alt="Atardecer en las montañas con el sol descendiendo detrás de las nubes, teñido en tonos rojos y naranjas. El logo de 'Cerro Dragón Tours' aparece en la parte inferior izquierda.">
+            </div>
+            <div class="carousel-item">
+              <img src="./img_static/5.jpg" class="d-block w-100" alt="Puesta de sol vista desde el 'Mirador Dragón', con un cartel de madera que lleva el nombre del mirador. Montañas en el horizonte bajo un cielo de colores cálidos al atardecer.">
+            </div>
+            <div class="carousel-item">
+              <img src="./img_static/6.png" class="d-block w-100" alt="Primer plano de un hongo pequeño, de sombrero rojo y blanco, que crece entre hojas secas y vegetación en el suelo del bosque. El logo de 'Cerro Dragón - Turismo Rural y Aventura' está en la esquina inferior derecha.">
+            </div>
+            <div class="carousel-item">
+              <img src="./img_static/9.jpeg" class="d-block w-100" alt="Un excursionista con mochila de senderismo se encuentra de pie en una roca en lo alto de una montaña, con los brazos extendidos, contemplando un paisaje montañoso bajo un cielo parcialmente nublado.">
+            </div>
+          </div>
+          <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Anterior imagen del carrusel</span>
+          </button>
+          <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Siguiente imagen del carrusel</span>
+          </button>
+        </div>
+        <!-- Mueve el contenedor de texto accesible aquí -->
+        <div id="carouselText" class="visually-hidden" aria-live="polite" aria-atomic="true"></div>
+      </div>
+      
+        
+      
+      <div class="container">
+        <!-- Tours -->
+        <div style="margin: 0 auto; text-align: center;">
+          <h2>Tours recomendados<br/>Descubre tu destino</h2>
+        </div>
+        <div class="row tours">
+          <!-- Aquí se van a renderizar los tours dinámicamente -->
+        </div>
+
+        <!-- Testimonios -->
+        <div class="mt-5" style="margin: 0 auto; text-align: center;">
+          <h2>Testimonios<br/>Lo que dicen sobre nosotros</h2>
+        </div>
+        <div class="row testimonies">
+          <!-- Aquí se van a renderizar los testimonios dinámicamente -->
+        </div>
+      </div>
+          
+    </main>
+
+    <footer>
+        <div id="footer-placeholder" class="bg-success" aria-label="Pie de página"></div>
+    </footer>
+
+</body>
+<script src="https://cdn.jsdelivr.net/npm/jwt-decode/build/jwt-decode.min.js" defer></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous" defer></script>
+<script src="js/script.js" defer></script>
+<script src="js/index.js" defer></script>
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    // Obtener el carrusel y el contenedor de texto accesible
+    const carousel = document.getElementById('carouselExampleAutoplaying');
+    const carouselText = document.getElementById('carouselText');
+
+    // Escuchar el evento 'slid.bs.carousel' para cuando cambia la imagen
+    carousel.addEventListener('slid.bs.carousel', function (event) {
+      const activeItem = carousel.querySelector('.carousel-item.active img');
+      // Actualizar el texto accesible con el alt de la imagen activa
+      carouselText.textContent = activeItem.alt;
+    });
+  });
+
+</script>
+</html>

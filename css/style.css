@@ -1,0 +1,25 @@
+#background-section {
+  background-image: url('../img/indexBg.png'); /* Reemplaza con la ruta de tu imagen */
+  background-size: cover; /* Asegura que la imagen cubra todo el contenedor */
+  background-position: center; /* Centra la imagen */
+  height: 620px;
+}
+
+.carousel-item img {
+  border-radius: 15px; /* Ajusta el valor según lo redondeado que quieras que sea */
+  height: 450px;
+}
+
+.table thead th {
+  background-color: #198754;
+  color: #ffffff;
+  font-size: 20px;
+}
+
+.table tbody tr td {
+  font-size: 18px;
+}
+
+.underline-hover:hover {
+  text-decoration: underline;
+}

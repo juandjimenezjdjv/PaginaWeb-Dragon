@@ -1,0 +1,108 @@
+/* etiquetas p */
+p {
+    font-family: 'Arial', sans-serif;
+    font-size: 20px;
+    color: #333;
+    line-height: 1.5;
+    margin-bottom: 20px;
+}
+
+/* etiquetas h1 */
+h1 {
+    font-family: 'Arial', sans-serif;
+    font-size: 40px;
+    color: #333;
+    line-height: 1.5;
+    margin-bottom: 20px;
+}
+
+/* Etiqueta h1 banner */
+h1.banner {
+  font-family: 'Arial', sans-serif;
+  font-size: 40px;
+  color: #fff;
+  line-height: 1.5;
+  margin-bottom: 20px;
+}
+
+/* etiquetas h2 */
+h2 {
+    font-family: 'Arial', sans-serif;
+    font-size: 30px;
+    color: #333;
+    line-height: 1.5;
+    margin-bottom: 20px;
+}
+
+
+/* etiquetas h3 */
+h3 {
+    font-family: 'Arial', sans-serif;
+    font-size: 25px;
+    color: #333;
+    line-height: 1.5;
+    margin-bottom: 20px;
+}
+
+/* etiquetas a */
+a {
+    font-family: 'Arial', sans-serif;
+    font-size: 20px;
+    color: #333;
+    line-height: 1.5;
+    text-decoration: none;
+}
+
+/* etiquetas a:hover */
+a:hover {
+    text-decoration: underline;
+}
+
+/* etiquetas ul */
+ul {
+    font-family: 'Arial', sans-serif;
+    font-size: 20px;
+    color: #ffffff;
+    line-height: 1.5;
+}
+.text-black {
+    color: #000000;
+}
+
+/* etiquetas li */
+li {
+    font-family: 'Arial', sans-serif;
+    font-size: 20px;
+    line-height: 1.5;
+}
+
+label {
+    font-family: 'Arial', sans-serif;
+    font-size: 20px;
+    color: #333;
+    line-height: 1.5;
+}
+
+input {
+    font-family: 'Arial', sans-serif;
+    font-size: 20px;
+    color: #000000;
+    line-height: 1.5;
+    border: 2px solid #000000;
+}
+
+.round {
+    border-radius: 10px;
+    width: 600px;
+    padding-left: 10px;
+}
+
+.form-control {
+    border-color: #545454; /* Borde negro */
+    margin-bottom: 15px;
+    width: 800px;
+}
+
+.form-check-input {
+    border-color: #545454;
+}

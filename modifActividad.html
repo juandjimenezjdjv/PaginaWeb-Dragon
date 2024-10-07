@@ -1,0 +1,121 @@
+<!-- crear o modificar una actividad.html -->
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Cerro Dragón Tours</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/letras.css">
+</head>
+<body>
+    
+  <header>
+    <div id="header-placeholder" class="bg-success" aria-label="Encabezado del sitio"></div>
+  </header>
+
+    <main>
+      <div class="container">
+        <div class="position-relative" style="margin-bottom: 20px; margin-top: 20px;">
+            <h1 class="banner text-start" style="color: black;">Crear o modificar una actividad</h1>
+            <p></p>
+        </div>
+
+        <form id="uploadForm" enctype="multipart/form-data" style="margin-bottom: 20px;" aria-labelledby="formulario de crear o modificar actividad">
+          <fieldset class="bordediv">
+            <legend>A continuación ingrese los detalles de la actividad:</legend>
+            
+            <div>
+              <label for="nomActividad" class="form-label">Nombre de la actividad:</label>
+              <input type="text" class="form-control" id="nomActividad" name="nombre" placeholder="Ingrese nombre de actividad" aria-required="true" required>
+            </div>
+        
+            <div>
+              <label for="msjActividad" class="form-label">Descripción de la actividad:</label>
+              <textarea id="msjActividad" name="descripcion" class="form-control" rows="4" placeholder="Escriba una descripción para la actividad" required></textarea>
+            </div>
+        
+            <div>
+              <label for="NPrecio" class="form-label">Define el precio:</label>
+              <input type="number" class="form-control" id="NPrecio" name="precio" placeholder="Solo escriba el monto del precio" aria-required="true" required>
+            </div>
+        
+            <div>
+              <label for="inclutec" class="form-label">¿Qué incluye la actividad?</label>
+              <input type="text" class="form-control" id="inclutec" name="incluyeActividad" placeholder="Describa que incluye la actividad" aria-required="true" required>
+            </div>
+        
+            <div>
+              <label for="dificultad" class="form-label">Dificultad:</label>
+              <input type="text" class="form-control" id="dificultad" name="dificultad" placeholder="Mencione la dificultad de la actividad" aria-required="true" required>
+            </div>
+        
+            <div>
+              <label for="fechaHoraI" class="form-label">Ingresar fecha y hora de inicio para la actividad:</label>
+              <input type="text" class="form-control" id="fechaHoraI" name="horaFechaSalida" placeholder="DD/MM/AAAA a las 00:00" aria-required="true" required>
+            </div>  
+        
+            <div>
+              <label for="fechaHoraF" class="form-label">Ingresar fecha y hora de finalización para la actividad:</label>
+              <input type="text" class="form-control" id="fechaHoraF" name="horaFechaLlegada" placeholder="DD/MM/AAAA a las 00:00" aria-required="true" required>
+            </div>
+        
+            <div class="mb-3">
+              <label for="formFileA" class="form-label">Suba imagen de referencia para la actividad:</label>
+              <input class="form-control" type="file" id="formFileA" name="formFileA">
+            </div>
+        
+            <div>
+              <label for="msjAlterna" class="form-label">Escriba el texto alternativo para la imagen:</label>
+              <textarea id="msjAlterna" name="textoAlternativo" class="form-control" rows="4" placeholder="Ingrese el texto alternativo para la imagen"></textarea>
+            </div>
+        
+            <fieldset class="mt-3" style="margin-bottom: 20px;">
+              <legend>Seleccione el tipo de actividad:</legend>
+              <div class="form-check form-check-inline">
+                <input type="radio" class="form-check-input" name="tipo" id="Campamento" value="0" required>
+                <label for="Campamento" class="form-check-label">Campamento</label>
+              </div>
+              <div class="form-check form-check-inline">
+                <input type="radio" class="form-check-input" name="tipo" id="Hospedaje" value="1" required>
+                <label for="Hospedaje" class="form-check-label">Hospedaje</label>
+              </div>
+              <div class="form-check form-check-inline">
+                <input type="radio" class="form-check-input" name="tipo" id="Senderismo" value="2" required>
+                <label for="Senderismo" class="form-check-label">Senderismo</label>
+              </div>
+              <div class="form-check form-check-inline">
+                <input type="radio" class="form-check-input" name="tipo" id="Tours" value="3" required>
+                <label for="Tours" class="form-check-label">Tours</label>
+              </div>
+              <div class="form-check form-check-inline">
+                <input type="radio" class="form-check-input" name="tipo" id="Voluntariado" value="4" required>
+                <label for="Voluntariado" class="form-check-label">Voluntariado</label>
+              </div>
+              <div class="form-check form-check-inline">
+                <input type="radio" class="form-check-input" name="tipo" id="Alianza" value="5" required>
+                <label for="Alianza" class="form-check-label">Alianza</label>
+              </div>
+            </fieldset>
+        
+            <button type="submit" class="btn btn-success d-inline-flex align-items-center mb-5 text-center text-white" aria-label="Guardar cambios">
+              Guardar cambios
+            </button>
+          </fieldset>
+        </form>
+        
+
+      </div>
+    </main>
+
+    <footer>
+      <div id="footer-placeholder" class="bg-success" aria-label="Pie de página"></div>
+    </footer>
+
+</body>
+<script src="https://cdn.jsdelivr.net/npm/jwt-decode/build/jwt-decode.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+<script src="js/script.js"></script>
+<script src="js/modifActividad.js"></script>
+</html>
