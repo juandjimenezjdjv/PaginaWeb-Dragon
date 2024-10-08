@@ -63,7 +63,7 @@ document.addEventListener('DOMContentLoaded', () => {
                     <a href="detalles.html?codigoServicio=${tour.codigoservicio}">
                         <img src="${tour.enlaceimagen || 'https://via.placeholder.com/400x200'}" loading="lazy" class="card-img-top" alt="${tour.textoalternativo}"width="400" height="300" >
                     
-                        <div class="card-body">
+                         <div class="card-body">
                             <h3 class="card-title">${tour.nombre}</h3>
                             <p class="card-text">Fecha salida: ${new Date(tour.horafechasalida).toLocaleString()}</p>
                             <p class="card-text">Fecha llegada: ${new Date(tour.horafechallegada).toLocaleString()}</p>
