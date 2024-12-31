@@ -4,6 +4,9 @@ This repository contains the source code for the **Cerro Dragón Tours** website
 ## About the Project  
 The website was developed to provide a functional and user-friendly platform that meets the needs of the business while serving as a practical application of web development skills learned during the university course. It showcases available tours, customer testimonials, and other services while utilizing modern web technologies.  
 
+**Please note that it may take a couple of minutes to load all the services, as Supabase is currently using the free plan, which can result in slightly slower response times.**
+
+
 ## Technologies Used  
 - **Frontend:**  
   - **Bootstrap**: Ensures a responsive and consistent design across all devices.  
