@@ -1,8 +1,8 @@
 # Cerro Dragón Tours Website  
-This repository contains the source code for the **Cerro Dragón Tours** website, a platform designed for a local business offering tours in the **Cerro Los Naranjos** area of Aserrí, Costa Rica.  
+This repository contains the source code for the **Cerro Dragón Tours** website, a platform designed as part of a university project for a real local business offering tours in the **Cerro Los Naranjos** area of Aserrí, Costa Rica.  
 
 ## About the Project  
-The website was built to provide an engaging and user-friendly experience for potential customers, showcasing available tours, customer testimonials, and additional services. It leverages modern web technologies to ensure performance, scalability, and ease of use.  
+The website was developed to provide a functional and user-friendly platform that meets the needs of the business while serving as a practical application of web development skills learned during the university course. It showcases available tours, customer testimonials, and other services while utilizing modern web technologies.  
 
 ## Technologies Used  
 - **Frontend:**  
@@ -24,4 +24,4 @@ The website was built to provide an engaging and user-friendly experience for po
 - Integration with Supabase for efficient data management.  
 - High-quality, optimized images powered by Cloudinary.  
 
-This project serves as the digital presence for **Cerro Dragón Tours**, helping connect travelers with the natural beauty and experiences of Cerro Los Naranjos.  
+This project not only serves as a digital presence for **Cerro Dragón Tours** but also as a demonstration of practical skills acquired during the university course.  
