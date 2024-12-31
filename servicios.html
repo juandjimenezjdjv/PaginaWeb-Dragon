@@ -28,17 +28,18 @@
     
         <div class="container mt-5">
             <!-- Barra de Filtros -->
+            <div id="filtroActivo" class="alert alert-success text-center" style="display: none;"></div>
              <div style="margin: 0; text-align: center;">
                 <h2>Elige donde quieres comenzar a disfrutar</h2>
                 <p>Filtra por el tipo de aventura que deseas experimentar</p>
              </div>
              <div class="d-flex justify-content-center mb-4" role="group" aria-label="Filtro de categorías">
-                <button type="button" class="btn btn-outline-success" onclick="filtrarServicios(0)">Campamento</button>
-                <button type="button" class="btn btn-outline-success" onclick="filtrarServicios(1)">Hospedaje</button>
-                <button type="button" class="btn btn-outline-success" onclick="filtrarServicios(2)">Senderismo</button>
-                <button type="button" class="btn btn-outline-success" onclick="filtrarServicios(3)">Tours</button>
-                <button type="button" class="btn btn-outline-success" onclick="filtrarServicios(4)">Voluntariado</button>
-                <button type="button" class="btn btn-success underline-hover" onclick="fetchServicios()">Limpiar Filtro</button>
+                <button type="button" class="btn btn-outline-success" onclick="filtrarServicios(0); mostrarFiltroActivo(0)">Campamento</button>
+                <button type="button" class="btn btn-outline-success" onclick="filtrarServicios(1); mostrarFiltroActivo(1)">Hospedaje</button>
+                <button type="button" class="btn btn-outline-success" onclick="filtrarServicios(2); mostrarFiltroActivo(2)">Senderismo</button>
+                <button type="button" class="btn btn-outline-success" onclick="filtrarServicios(3); mostrarFiltroActivo(3)">Tours</button>
+                <button type="button" class="btn btn-outline-success" onclick="filtrarServicios(4); mostrarFiltroActivo(4)">Voluntariado</button>
+                <button type="button" class="btn btn-success underline-hover" onclick="fetchServicios(); limpiarFiltro()">Limpiar Filtro</button>
             </div>
     
             <!-- Cajones de Tours -->
@@ -59,4 +60,27 @@
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 <script src="js/script.js"></script>
 <script src="js/servicios.js"></script>
+<script>
+    
+    function mostrarFiltroActivo(tipo) {
+        const categorias = ["Campamento", "Hospedaje", "Senderismo", "Tours", "Voluntariado"];
+        const filtroActivo = document.getElementById("filtroActivo");
+
+        filtroActivo.innerHTML = '';
+
+        const mensaje = document.createElement('p');
+        mensaje.textContent = `Filtro activo: ${categorias[tipo]}`;
+        mensaje.style.marginBottom = "0";
+        
+        filtroActivo.appendChild(mensaje);
+        filtroActivo.style.display = "block";
+    }
+
+    function limpiarFiltro() {
+        console.log("Mostrando todos los servicios");
+        
+        const filtroActivo = document.getElementById("filtroActivo");
+        filtroActivo.style.display = "none";
+    }
+</script>
 </html>

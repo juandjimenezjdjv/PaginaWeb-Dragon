@@ -1,4 +1,4 @@
-<!-- perfil Admin.html -->
+<!-- gestion testimonios.html -->
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -19,42 +19,31 @@
     <main>
       <div class="container">
         <div class="position-relative" style="margin-bottom: 20px; margin-top: 20px;">
-            <h1 class="banner text-start" style="color: black;">Administración de actividades y alianzas</h1>
-        </div>
-            <p>Administre las actividades de la empresa</p>
-            <button class="btn btn-success ml-2" aria-label="Botón de agregar actividad" onclick="eliminarCodigoServicio(); window.location.href='modifActividad.html'"  data-bs-toggle="tooltip" title="Crear actividad">
-              <strong>+</strong>
-          </button>
-            
+            <h1 class="banner text-start" style="color: black;">Administración de testimonios</h1>
+        </div>            
             <table class="table table-bordered w-100 my-3">
               <thead>
                   <tr>
-                      <th>Nombre de actividad</th>
-                      <th>Código de actividad</th>
-                      <th>Fecha</th>
-                      <th>Tipo</th>
-                      <th>Precio</th>
+                      <th>Nombre del cliente</th>
+                      <th>Testimonio del cliente</th>
+                      <th>Estado</th>
                       <th>Acciones</th>
                   </tr>
               </thead>
               <!-- Aquí se cargarán las filas de la base de datos con JavaScript -->
-              <tbody id="serviciosTableBody">
+              <tbody id="testimoniesTableBody">
                 <!-- Aquí se cargarán las filas de la base de datos con JavaScript -->
             </tbody>
           </table>
 
         <!-- Usando solo un enlace con clases de botón -->
-        <a href="crearCuentaAdmin.html" class="btn btn-success d-inline-flex align-items-center mb-5 text-center text-white" aria-label="Agregar administrador">
-          Agregar administrador
-        </a>
-        <a href="gestionTestimonios.html" class="btn btn-success d-inline-flex align-items-center mb-5 text-center text-white" aria-label="Gestion de testimonios">
-          Gestión de testimonios
+        <a href="perfilAdmin.html" class="btn btn-success d-inline-flex align-items-center mb-5 text-center text-white" aria-label="Volver al perfil de administrador">
+          Volver al perfil de administrador
         </a>
 
       </div>
     
     <!-- AQUI CODE -->
-     
     </main>
 
     <footer>
@@ -62,13 +51,8 @@
     </footer>
 
 </body>
-<script>
-  function eliminarCodigoServicio() {
-      sessionStorage.removeItem('codigoServicio');
-  }
-  </script>
 <script src="https://cdn.jsdelivr.net/npm/jwt-decode/build/jwt-decode.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 <script src="js/script.js"></script>
-<script src="js/perfilAdmin.js"></script>
+<script src="js/gestion.js"></script>
 </html>

@@ -22,13 +22,18 @@
               <h1 class="display-5 fw-bold text-white">Explora la Naturaleza en Libertad</h1>
               <div class="col-lg-6 mx-auto">
                 <p class="lead mb-4 text-white">En Cerro Dragon Tours te invitamos a descubrir la naturaleza en su estado más puro. Recorrerás senderos rodeados de cerros, respirarás aire fresco y te desconectarás del mundo cotidiano. ¡Es hora de explorar sin límites y dejarte llevar por la belleza natural que te rodea!</p>
-                <div class="d-grid gap-2 d-sm-flex justify-content-sm-center" role="group" aria-labelledby="Búsqueda de tours">
-                  <label id="Búsqueda de tours" for="buscar" class="visually-hidden">Buscar tours</label>
+
+                <fieldset class="d-grid gap-2 d-sm-flex justify-content-sm-center" role="group" aria-labelledby="legend-busqueda-tours">
+                  <legend id="legend-busqueda-tours" class="visually-hidden">Búsqueda de tours</legend>
+                  
+                  <label for="buscar" class="visually-hidden">Buscar tours</label>
                   <input class="round" type="text" id="buscar" placeholder="Búsqueda de tours" aria-label="Buscar tours">
-                  <button type="submit" class="btn btn-success btn-lg px-4 gap-3" aria-label="Iniciar búsqueda">
-                      <img src="./img/buscar.png" alt="Icono de buscar">
+                  
+                  <button type="submit" class="btn btn-success btn-lg px-4 gap-3" aria-label="Iniciar búsqueda" data-bs-toggle="tooltip" title="Buscar">
+                    <img src="./img/buscar.png" alt="Icono de buscar">
                   </button>
-                </div>
+                </fieldset>
+                
               </div>
           </div>
       </div>
@@ -101,17 +106,31 @@
 <script src="js/index.js" defer></script>
 <script>
   document.addEventListener('DOMContentLoaded', () => {
-    // Obtener el carrusel y el contenedor de texto accesible
-    const carousel = document.getElementById('carouselExampleAutoplaying');
-    const carouselText = document.getElementById('carouselText');
-
-    // Escuchar el evento 'slid.bs.carousel' para cuando cambia la imagen
-    carousel.addEventListener('slid.bs.carousel', function (event) {
-      const activeItem = carousel.querySelector('.carousel-item.active img');
-      // Actualizar el texto accesible con el alt de la imagen activa
-      carouselText.textContent = activeItem.alt;
-    });
+  const carousel = document.getElementById('carouselExampleAutoplaying');
+  const carouselText = document.getElementById('carouselText');
+  const observer = new IntersectionObserver(handleVisibilityChange, {
+    threshold: 0.1
   });
+  
+  observer.observe(carousel);
+  carousel.addEventListener('slid.bs.carousel', function (event) {
+    const activeItem = carousel.querySelector('.carousel-item.active img');
+    carouselText.textContent = activeItem.alt;
+  });
+
+  function handleVisibilityChange(entries) {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        carousel.setAttribute('data-bs-ride', 'carousel');
+        carouselText.setAttribute('aria-live', 'polite');
+      } else {
+        carousel.setAttribute('data-bs-ride', 'false');
+        carouselText.setAttribute('aria-live', 'off');
+      }
+    });
+  }
+});
+
 
 </script>
 </html>

@@ -9,8 +9,7 @@ document.addEventListener('DOMContentLoaded', async () => {
         return; // Detiene la carga de la página
     }
 
-    const urlParams = new URLSearchParams(window.location.search);
-    const codigoServicio = urlParams.get('codigoServicio'); // Obtener el parámetro de la URL
+    const codigoServicio = sessionStorage.getItem('codigoServicio');
 
     if (codigoServicio) {
         // Si existe código de servicio, estamos modificando, cargar los datos
@@ -63,16 +62,23 @@ async function cargarDatosServicio(codigoServicio) {
     try {
         const response = await fetch(`https://api-dragon.onrender.com/getService/${codigoServicio}`);
         const servicio = await response.json();
-        
+
         // Llenar el formulario con los datos del servicio para editar
         document.getElementById('nomActividad').value = servicio.nombre;
         document.getElementById('msjActividad').value = servicio.descripcion;
         document.getElementById('NPrecio').value = servicio.precio;
         document.getElementById('inclutec').value = servicio.incluyeactividad;
         document.getElementById('dificultad').value = servicio.dificultad;
-        document.getElementById('fechaHoraI').value = servicio.horafechasalida;
-        document.getElementById('fechaHoraF').value = servicio.horafechallegada;
+
+        // Convertir formato de fecha para el input datetime-local
+        const fechaInicio = new Date(servicio.horafechasalida).toISOString().slice(0, 16);
+        const fechaFin = new Date(servicio.horafechallegada).toISOString().slice(0, 16);
+
+        document.getElementById('fechaHoraI').value = fechaInicio;
+        document.getElementById('fechaHoraF').value = fechaFin;
+
         document.getElementById('msjAlterna').value = servicio.textoalternativo;
+
         // Marcar el radio button correspondiente al tipo de actividad
         if (servicio.tipo !== undefined) {
             document.querySelector(`input[name="tipo"][value="${servicio.tipo}"]`).checked = true;
@@ -81,6 +87,7 @@ async function cargarDatosServicio(codigoServicio) {
         console.error('Error al cargar el servicio:', error);
     }
 }
+
 
 // Función para crear un nuevo servicio
 async function crearServicio(data) {
@@ -96,7 +103,7 @@ async function crearServicio(data) {
         const result = await response.json();
         if (response.ok) {
             alert('Servicio creado exitosamente');
-            window.location.href = 'http://127.0.0.1:5500'; // Redirigir a la página principal o donde prefieras
+            window.location.href = 'perfilAdmin.html'; // Redirigir a la página principal o donde prefieras
         } else {
             alert('Error al crear el servicio: ' + result.message);
         }
@@ -120,7 +127,7 @@ async function actualizarServicio(codigoServicio, data) {
         const result = await response.json();
         if (response.ok) {
             alert('Servicio actualizado exitosamente');
-            window.location.href = 'http://127.0.0.1:5500'; // Redirigir a la página principal o donde prefieras
+            window.location.href = 'perfilAdmin.html'; // Redirigir a la página principal o donde prefieras
         } else {
             alert('Error al actualizar el servicio: ' + result.message);
         }

@@ -95,6 +95,7 @@ function handleLogOut(event) {
 
   // Redirigir a la página de inicio de sesión
   window.location.href = 'index.html';
+  alert("Se cerró la sesión correctamente");
 }
 document.addEventListener('DOMContentLoaded', () => {
     // Código para cargar header y footer
@@ -191,6 +192,7 @@ document.addEventListener('DOMContentLoaded', () => {
             sessionStorage.setItem('token', result.token);
             sessionStorage.setItem('correo', correo);
             window.location.href = 'index.html';
+            alert("Se inicio sesión correctamente");
           } else {
             alert('Error al iniciar sesión: ' + result.message);
           }

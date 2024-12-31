@@ -1,6 +1,6 @@
 document.addEventListener('DOMContentLoaded', function () {
     // Seleccionar el botón de agregar testimonio
-    const btnAgregarTestimonio = document.querySelector('a[aria-label="Botón de agregar un testimonio"]');
+    const btnAgregarTestimonio = document.querySelector('a[aria-label="Botón de enviar un testimonio"]');
 
     // Agregar evento click al botón
     btnAgregarTestimonio.addEventListener('click', async function (event) {

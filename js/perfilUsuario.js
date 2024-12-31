@@ -41,7 +41,7 @@ function renderPagos(pagos) {
                 <td>${pago['Código de actividad']}</td>
                 <td>${pago['Fecha']}</td>
                 <td>${pago['Día de compra']}</td>
-                <td>₡${pago['Precio']}</td>
+                <td style="text-align: right;">₡${parseFloat(pago['Precio']).toLocaleString()}</td>
             </tr>
         `;
         tableBody.insertAdjacentHTML('beforeend', row);
